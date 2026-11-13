@@ -34,6 +34,8 @@ print(playerList)
 
 #One imposter for now
 imposter = playerList[random.randint(0,len(playerList)-1)]
+#starting player
+startingPlayer = playerList[random.randint(0,len(playerList)-1)]
 
 #Tells user roles, category, and word
 print("PASS DEVICE AROUND AND INPUT NAME TO SEE ROLE, THEN PRESS ENTER, TYPE 'exit' TO MOVE ON")
@@ -49,6 +51,9 @@ while rolecheck != "exit":
         print(f"Category is {randomCategory}, blend in.")
         input("press enter when done reading")
         print("skipping\n"*50)
+
+print("Starting player is:")
+print(pyfiglet.figlet_format(startingPlayer, font="slant"))
 
 vote = input("VOTE PROPOSED IMPOSTER OUT: ")
 while n < 2:
